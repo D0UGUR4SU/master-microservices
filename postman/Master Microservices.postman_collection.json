@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "45584018-19f2-4fa4-b3bd-d523cc793fef",
+		"name": "Master Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14969331"
+	},
+	"item": [
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "CreateAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Douglas Souza\",\n    \"email\": \"douglas@email.com\",\n    \"mobileNumber\": \"99999999999\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/create",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FetchAccountDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCALHOST}}/api/fetch?mobileNumber=99999999999",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"fetch"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "99999999999"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
