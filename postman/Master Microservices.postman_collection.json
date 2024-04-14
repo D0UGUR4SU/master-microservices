@@ -59,8 +59,63 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "UpdateAccountDetails",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customerId\": 1,\n    \"name\": \"Douglas Souza\",\n    \"email\": \"douglas@email.com\",\n    \"mobileNumber\": \"99999999999\",\n    \"accountsDto\": {\n        \"customerId\": null,\n        \"accountNumber\": 1655045622,\n        \"accountType\": \"Savings\",\n        \"branchAddress\": \"21 Main Street, New York\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/update",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAccountDetails",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{LOCALHOST}}/api/delete?mobileNumber=99999999999",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "mobileNumber",
+									"value": "99999999999"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
+		},
+		{
+			"name": "Customer",
+			"item": []
 		}
 	]
 }
