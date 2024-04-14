@@ -25,7 +25,9 @@ public class AccountsController {
 
   @PostMapping("/create")
   public ResponseEntity<ResponseDto> create(@RequestBody CustomerDto customerDto) {
-
-    return ResponseEntity.status(HttpStatus.CREATED).body(new ResponseDto(STATUS_201, MESSAGE_201));
+    iAccountsService.createAccount(customerDto);
+    return ResponseEntity
+            .status(HttpStatus.CREATED)
+            .body(new ResponseDto(STATUS_201, MESSAGE_201));
   }
 }
