@@ -14,16 +14,15 @@ import java.time.LocalDate;
 @MappedSuperclass
 public class BaseEntity {
 
-    @Column(updatable = false)
-    private LocalDate createdAt;
+  @Column(updatable = false)
+  private LocalDate createdAt;
 
-    @Column(insertable = false)
-    private LocalDate updatedAt;
+  @Column(insertable = false)
+  private LocalDate updatedAt;
 
-    @Column(updatable = false)
-    private String createdBy;
+  @Column(updatable = false)
+  private String createdBy;
 
-    @Column(insertable = false)
-    private String updatedBy;
-
+  @Column(insertable = false)
+  private String updatedBy;
 }
